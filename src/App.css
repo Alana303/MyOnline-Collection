@@ -1,0 +1,284 @@
+/* ---------------- GLOBAL RESETS & FONTS ---------------- */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap');
+* {
+  box-sizing: border-box;
+  margin: 0; padding: 0;
+}
+body {
+  font-family: 'Montserrat', Arial, sans-serif;
+  background: red;
+  color: #eaf6fb;
+  min-height: 100vh;
+  transition: background 0.4s, color 0.4s;
+  body {
+  padding-top: 96px; /* same height as navbar */
+}
+}
+a { color: #23e6e6; text-decoration: none; transition: color 0.2s; }
+a:hover { color: #70e1f5; }
+
+
+/* Page Fade In */
+@keyframes pageFadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/* =========================
+   Header & Navigation
+   ========================= */
+#menubar {
+    background-color: black;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px !important;
+    position: fixed;
+    width: 100%;
+    z-index: 500;
+    top: 0;
+    height: 96px !important;
+}
+
+.navbar {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 20px !important;
+}
+
+.nav-links li a {
+    color: whitesmoke;
+    text-decoration: none;
+    font-size: 1.09rem !important ;
+    padding: 10px 30px !important;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 30px !important;
+    transition: background 0.3s;
+}
+
+.nav-links li a:hover {
+    background-color: red !important;
+    color: whitesmoke;
+}
+
+.active {
+    background-color: dodgerblue;
+    color: white !important;
+}
+
+.logo img {
+    height: 65px!important;
+    max-width: 150px;
+    object-fit: contain;
+    margin-left: 1px !important;
+    margin-right: 50px;
+}
+
+/* Menu Icon */
+.menu-icon {
+    font-size: 1.7rem;
+    color: white;
+    cursor: pointer;
+    display: none;
+}
+
+/* Responsive Navigation */
+@media (max-width: 850px) {
+    .menu-icon { display: block; margin-left: auto; }
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 65px;
+        right: -220px;
+        width: 220px;
+        background-color: black;
+        border-radius: 0 0 20px 20px;
+        text-align: right;
+        padding: 10px 0;
+    }
+    .nav-links.active { display: flex; right: 0; }
+    .nav-links li { margin: 10px 0; }
+}
+
+@media (max-width: 850px) {
+  .nav-links { 
+    flex-direction: column; position: fixed; top:70px; right:-230px; width:230px;
+    background: #14213d; height: 100vh; align-items: start; padding-top: 2vw;
+    transition: right 0.31s cubic-bezier(.43,.13,.23,1.33); z-index:1201;
+  }
+  .nav-links.active { right:0; }
+  .menu-icon { display: block; margin-left: auto;}
+}
+
+
+/* Hero Section Styling */
+.hero {
+    background: #111a24;
+    padding: 80px 0;
+    text-align: center;
+    color: #fff;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.hero-content {
+    margin-top: 20px !important;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    flex-wrap: wrap; /* Fix overflow issue */
+}
+
+.hero-text {
+  margin-top: 20px;
+    flex: 1;
+    padding: 20px;
+    min-width: 300px; /* Ensure it doesn't shrink too much */
+}
+
+/* Hero Paragraph Animation */
+.hero-text p {
+    margin-top: 20px;
+    font-size: 1.2rem;
+    line-height: 1.5;
+    opacity: 0; /* Initially hidden */
+    animation: fadeIn 2s ease-in-out 1s forwards; /* Delay fade-in effect */
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.hero-text h1 {
+    font-size: 2.8rem;
+    margin-bottom: 20px;
+    font-weight: bold;
+    animation: typing 3s steps(40, end), blink .75s step-end infinite;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 3px solid #fff;
+}
+
+@keyframes typing {
+    from { width: 0; }
+    to { width: 100%; }
+}
+
+@keyframes blink {
+    from, to { border-color: transparent; }
+    50% { border-color: white; }
+}
+
+
+.cta-btn {
+    display: inline-block;
+    padding: 15px 35px;
+    margin-left: -10px;
+    margin-right: 25px;
+    background: blue;
+    color: #fff;
+    font-size: 1.2rem;
+    text-decoration: none;
+    border-radius: 50px;
+    transition: transform 0.3s ease-in-out, background 0.3s;
+    margin-top: 20px;
+    box-shadow: 0 4px 15px rgba(255, 87, 51, 0.3);
+}
+
+.cta-btn:hover {
+    background: #ff5733;
+    transform: scale(1.1);
+}
+
+.hero-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    min-width: 300px; /* Ensures image does not overflow */
+}
+
+.hero-image img {
+    margin-top: 50px;
+    margin-left: 100px;
+    margin-right: 0px;
+    max-width: 100%;
+    height: auto;
+    border-radius: 50%;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    border: 6px solid #23e6e6;
+}
+#hero-title {
+    color: whitesmoke !important;
+    font-weight: bolder;
+}
+
+
+.social-links { margin: 3.5em 0; }
+.social-links a {
+  font-size: 1.51rem; margin-right: 16px; color: #23e6e6;
+  transition:color .18s, transform .18s;
+  gap: 30px;
+  padding: 10px 30px;
+}
+.social-links a:hover { color: red; transform: scale(1.2) rotate(-8deg); }
+
+
+
+/* 🖤 Footer Section */
+.footer {
+   background: #15212c;
+  color: #65d6ff; text-align: center; padding: 2.5em 0 1.2em 0; box-shadow: 0 -2px 21px #1a98a222;
+  font-size:1.09em; letter-spacing:1.5px; position:relative;
+}
+
+.scroll-to-top {
+  position: fixed; right: 24px; bottom: 65px; z-index:1205;
+  border: none; border-radius: 100%; background: #23e6e6;
+  color: #173640; font-size:1.45em; font-weight:700;
+  width: 48px; height:48px;
+  box-shadow: 0 4px 18px #22e6e696; cursor: pointer;
+  transition: background 0.14s, color .19s, box-shadow .20s, transform .20s;
+  outline:none;
+}
+.scroll-to-top:hover { background:#23b9e6; color:#fff; box-shadow: 0 6px 28px #23e6e6aa; transform: scale(1.05);}
+.footer p {margin-top:1.3em;}
+/* Smooth Scroll Animation */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.contact, .footer {
+    animation: fadeInUp 1.5s ease-in-out;
+}
+.scroll-to-top {
+    /* ... your existing styles ... */
+    display: none; /* Initially hidden, JS will manage visibility */
+    position: fixed; /* Usually better for scroll to top buttons */
+    bottom: 20px;
+    right: 20px;
+    /* ... other styles ... */
+}
+

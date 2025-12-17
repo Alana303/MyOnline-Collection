@@ -1,0 +1,29 @@
+.footer {
+  background: #0c0c0c;
+  color: #ccc;
+  text-align: center !important;
+  align-items: center !important;
+  justify-content: center !important;
+  padding: 20px 10px;
+  font-size: 0.9rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  position: relative;
+}
+
+.footer .scroll-to-top {
+  position: absolute;
+  right: 24px;
+  bottom: 24px;
+  background: #222;
+  border: none;
+  color: #fff;
+  padding: 6px 10px;
+  border-radius: 50%;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.footer .scroll-to-top:hover {
+  background: #333;
+}
