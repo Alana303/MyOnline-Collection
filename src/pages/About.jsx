@@ -1,15 +1,22 @@
 import React, { useEffect } from "react";
 import "./about.css";
+import { Link } from "react-router-dom";
 import {
   FaEnvelope,
   FaLinkedin,
   FaGithub,
+  FaInstagram,
   FaLayerGroup,
   FaMapMarkerAlt,
   FaMugHot,
 } from "react-icons/fa";
 
 const About = () => {
+  // Scroll to top button
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
+
   useEffect(() => {
     // Fade-in animations
     const faders = document.querySelectorAll(".fade-in-section");
@@ -50,21 +57,78 @@ const About = () => {
               I’m <strong>Jeff Fortune Amayo</strong>, a{" "}
               <em>Bachelor of Business Information Technology (BBIT)</em>{" "}
               graduate from
-              <strong> Mount Kenya University (Class of 2025)</strong>.
+              <strong> Mount Kenya University (Class of 2025)</strong>. My
+              career mission is simple yet powerful: to design and build
+              <b> secure, intuitive, and impactful digital solutions</b> that
+              bridge the gap between technology and real-world business needs.
+            </p>
+
+            <p>
+              My journey has allowed me to merge{" "}
+              <b>software engineering expertise</b> with{" "}
+              <b>business problem-solving skills</b>. From developing
+              <b> web applications</b> and <b>expense tracking systems</b> to
+              managing <b>databases</b> and designing visuals that communicate
+              with clarity, I thrive where creativity meets logic.
+            </p>
+
+            <p>
+              Beyond technical execution, I value professionalism, integrity,
+              and collaboration. Whether working on independent projects or
+              contributing within teams, I bring{" "}
+              <strong>discipline, adaptability, and a growth mindset</strong>{" "}
+              into every endeavor.
             </p>
 
             <h3 className="subtitle">
               <FaLayerGroup className="accent" /> Core Competencies
             </h3>
 
+            <div className="skills-row">
+              <span className="skill-badge">
+                FrontEnd Frameworks: HTML5, CSS3, Vanilla JavaScript, Bootstrap
+                CSS, ReactJs
+              </span>
+              <span className="skill-badge">
+                Database Management: MySQL/MariaDB, phpMyAdmin, SQLite, Oracle
+                Database
+              </span>
+              <span className="skill-badge">Agile Project Collaboration</span>
+              <span className="skill-badge">
+                Professional Graphic Design: Proficient in Adobe Suite
+                (Photoshop CS6 Extended & Illustrator) and Canva.
+              </span>
+            </div>
+
             <h3 className="subtitle">
               <FaMapMarkerAlt className="accent" /> Location & Availability
             </h3>
+
+            <p>
+              I’m based in <strong>Nairobi, Kenya</strong> 🇰🇪 and available for{" "}
+              <b>freelance, remote, or full-time roles</b>. I welcome
+              opportunities to contribute to impactful projects where technology
+              drives growth and positive change.
+            </p>
 
             <h3 className="subtitle">
               <FaMugHot className="accent" /> Beyond the Code
             </h3>
 
+            <ul className="fun-list">
+              <li>🎧 Lo-fi beats and black coffee fuel my coding sprints</li>
+              <li>📷 Capturing urban stories through street photography</li>
+              <li>🎮 Gaming and experimenting with pixel art design</li>
+            </ul>
+
+            <div className="resume-action">
+              <a href="/files/JEFF-FORTUNE-AMAYO-CV.pdf"
+              download className="resume-link">
+                <i className="fa fa-download"></i>View My Work 
+              </a>
+            </div>
+
+            
             <div className="social-links">
               <a href="mailto:jeffamayo050@gmail.com" title="Email">
                 <FaEnvelope />
@@ -85,6 +149,7 @@ const About = () => {
               >
                 <FaGithub />
               </a>
+            
             </div>
           </div>
         </div>
