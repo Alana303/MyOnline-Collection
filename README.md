@@ -8,22 +8,8 @@ A personal portfolio website showcasing my projects, skills, and professional ex
 
 ---
 
-## 🖼️ Portfolio Screenshots
 
-Below are previews of the main sections of the portfolio website. These screenshots are taken directly from the live UI and stored in the repository for reference.
 
-### 🏠 Home
-![Home](frontend/public/images/Home.png)
-
-### 👤 About
-![About](frontend/public/images/About.png)
-
-### 💼 Projects 
-![Projects](frontend/public/images/Projects.png)
-
-### 📬 Contact
-![Contact](frontend/public/images/Contact.png)
----
 
 ## ✨ Features
 

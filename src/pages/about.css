@@ -51,7 +51,7 @@ a:hover { color: #70e1f5; }
 }
 
 .nav-links li a {
-    color: white !important;
+    color: whitesmoke !important;
     text-decoration: none;
     font-size: 1.05rem;
     padding: 10px 30px !important;
@@ -59,7 +59,7 @@ a:hover { color: #70e1f5; }
     display: flex;
     align-items: center;
     justify-content: center;
-    margin: 0 30px !important;
+    margin-top: 20px !important;
     transition: background 0.3s;
 }
 
@@ -133,7 +133,7 @@ a:hover { color: #70e1f5; }
 }
 @media (max-width: 1000px) { .about-content { flex-direction: column; align-items:center; } }
 
-.about-img { flex: 0 0 268px; margin-right: 34px;}
+.about-img { flex: 0 0 268px; margin-right: 34px; margin-top: -50px !important;}
 .about-img img {
   width: 420px; height: 420px; object-fit: cover; border-radius: 50%; margin-top: 6.5vw;
   border: 6px solid #23e6e6;
@@ -161,7 +161,7 @@ a:hover { color: #70e1f5; }
   animation: slideInLeft 1.15s cubic-bezier(.43,.15,.43,1.32);
   color: white;
   font-weight: bolder;
-  margin-top: 5px !important;
+  margin-top: -100px !important;
 }
 .section-title {
   font-size: 2.8rem; font-weight: bolder;

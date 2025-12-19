@@ -37,7 +37,8 @@ a:hover { color: #70e1f5; }
     width: 100%;
     z-index: 500;
     top: 0;
-    height: 96px !important;
+    height: 70px !important;
+    margin-top: 0px !important;
 }
 
 .navbar {
@@ -57,7 +58,7 @@ a:hover { color: #70e1f5; }
 .nav-links li a {
     color: whitesmoke;
     text-decoration: none;
-    font-size: 1.09rem !important ;
+    font-size: 16px !important ;
     padding: 10px 30px !important;
     border-radius: 15px;
     display: flex;
@@ -211,10 +212,11 @@ a:hover { color: #70e1f5; }
     display: flex;
     justify-content: center;
     min-width: 300px; /* Ensures image does not overflow */
+    margin-top: -200px !important;
 }
 
 .hero-image img {
-    margin-top: 50px;
+    margin-top: 0px !important;
     margin-left: 100px;
     margin-right: 0px;
     max-width: 100%;
